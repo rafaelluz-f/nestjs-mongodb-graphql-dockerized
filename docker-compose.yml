@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  server:
+    container_name: nestjsgraphql_server
+    image: nestjsgraphql/server:1.0
+    build:
+      context: ./server
+      dockerfile: ./dockerfile
+    working_dir: /home/node/app
+    depends_on:
+      - db
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - ${SERVER_HOST}:${SERVER_CONTAINER}
+    volumes:
+      - ./server:/home/node/app
+    command: "yarn run start:dev"
+  db:
+    image: mongo
+    container_name: nestjsgraphql
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - "27017:27017"
+
+volumes:
+  mongodata:
+    driver: local
+  server:
