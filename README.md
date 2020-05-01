@@ -1,10 +1,10 @@
 # nestjs-postgresql-dockerized
 
-NESTJS + POSTGRESQL + JEST + DOCKER = ❤️
+NESTJS + MONGODB + GRAPHQL + TYPEORM + DOCKER = ❤️
 
 ### App
 
-Simple app using nestJS with postgreSQL. This app was created following the course https://www.udemy.com/course/nestjs-zero-to-hero/.
+Simple app using nestJS with graphql mongodb. This app was created following the course https://www.udemy.com/course/nestjs-zero-to-hero/.
 
 ---
 
@@ -21,8 +21,8 @@ $ node --version
 ### How to run
 
 ```
-$ git clone https://github.com/rafaelfigueiredo-l/nestjs-postgresql-dockerized
-$ cd nestjs-postgresql-dockerized
+$ git clone https://github.com/rafaelfigueiredo-l/nestjs-mongodb-graphql-dockerized
+$ cd nestjs-mongodb-graphql-dockerized
 $ cd server
 $ yarn install
 $ cd ..
